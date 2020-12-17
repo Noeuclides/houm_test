@@ -2,7 +2,7 @@
 
 ### Requerimientos:
 
-Tener instalado el módulo "requests" de python
+Tener una versión de python superior a 3.5 y el módulo "requests":
 ```sh
 $ pip list | grep requests
 requests           2.25.0 
