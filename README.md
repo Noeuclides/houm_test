@@ -14,6 +14,11 @@ $ pip install requests
 ```
 
 ### Ejecución:
+```sh
+$ git clone https://github.com/Noeuclides/houm_test.git
+$ cd houm_test
+```
+
 1. Obtener cuantos pokemones poseen en sus nombres “at” y tienen 2 “a” en su nombre, incluyendo la primera del “at”.
 ```sh
 $ python3 1-poke_name.py
