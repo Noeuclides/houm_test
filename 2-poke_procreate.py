@@ -3,10 +3,10 @@ import time
 from collections import OrderedDict
 
 
-def poke_procreation(
-    session: requests.sessions.Session,
-    pokemon: str
-) -> int:
+Session = requests.sessions.Session
+
+
+def poke_procreation(session: Session, pokemon: str) -> int:
     """
     method to obtain with how many species can a pokemon procreate
     :session: requests session
@@ -32,4 +32,4 @@ if __name__ == "__main__":
     session = requests.Session()
     print(poke_procreation(session, 'raichu'))
     t1 = time.time()
-    print(t1-t0)
+    print(f'(execution time: {t1-t0})')

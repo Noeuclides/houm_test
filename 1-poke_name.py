@@ -2,7 +2,10 @@ import requests
 import time
 
 
-def get_pokemon_name(session: requests.sessions.Session) -> int:
+Session = requests.sessions.Session
+
+
+def get_pokemon_name(session: Session) -> int:
     """
     method to get the number of pokemons that have "at" in his
     name and that have the char "a" twice.
@@ -29,4 +32,4 @@ if __name__ == "__main__":
     t1 = time.time()
 
     print(count)
-    print(t1-t0)
+    print(f'(execution time: {t1-t0})')

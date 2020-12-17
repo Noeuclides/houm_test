@@ -2,10 +2,10 @@ import requests
 import time
 
 
-def fighting_weight(
-    session: requests.sessions.Session,
-    poke_type: str
-) -> list:
+Session = requests.sessions.Session
+
+
+def fighting_weight(session: Session, poke_type: str) -> list:
     """
     method to get the max and min weight of an specific type
     of pokemon that belongs to the first generation.
@@ -43,7 +43,7 @@ def poke_conditional(pokemon: dict, first_gen: list) -> bool:
     return poke_id <= 151 and pokemon['name'] in first_gen
 
 
-def get_first_generation(session: requests.sessions.Session) -> list:
+def get_first_generation(session: Session) -> list:
     """
     method to retrieve the first generations pokemons
     return a list with the pokemon names.
@@ -62,4 +62,4 @@ if __name__ == "__main__":
     t1 = time.time()
 
     print(weight)
-    print(t1-t0)
+    print(f'(execution time: {t1-t0})')
